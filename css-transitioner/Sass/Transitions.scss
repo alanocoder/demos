@@ -1,0 +1,115 @@
+﻿.bar {
+    position: fixed;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 10;
+}
+.spacing {
+    padding-bottom: 20px;
+}
+
+body {
+    margin: 0;
+}
+
+.trsn-anchor {
+    position: relative;
+    margin-top: 50px;
+}
+
+.appeared {
+    position: relative;
+    left: 0;
+    width: 100%;
+}
+
+.disappeared {
+    position: absolute;
+    opacity: 0;
+}
+
+.zoom-in-out, .zoom-in-out.disappeared {
+    position: absolute;
+    transform: scale(0.6);
+    opacity: 0;
+    width: 100%;
+    transition: all .3s ease-in;
+}
+
+.zoom-in-out.appearing {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.zoom-in-out.appeared {
+    position: relative;
+    transform: none;
+    transition: none;
+    opacity: 1;
+}
+
+.fade-in-out, .fade-in-out.appeared {
+    position: relative;
+    width: 100%;
+    opacity: 1;
+    transition: opacity .3s ease-out;
+}
+
+.fade-in-out.appearing {
+    position: absolute;
+}
+
+.fade-in-out.disappearing, .fade-in-out.disappeared {
+    position: absolute;
+    opacity: 0;
+}
+
+.slide-in-right {
+    position: absolute;
+    left: 100%;
+    width: 100%;
+    transition: left .3s ease-out;
+}
+
+.slide-in-right.appearing {
+    left: 0;
+}
+
+.slide-in-left {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    transition: left .3s ease-out;
+}
+
+.slide-in-left.appearing {
+    left: 0;
+}
+
+.slide-out-left {
+    position: static;
+    left: 0;
+    width: 100%;
+}
+
+.slide-out-left.unappearing, .slide-out-left.disappeared {
+    position: absolute;
+    left: -100%;
+    transition: left .3s ease-out;
+}
+
+
+.slide-out-right {
+    position: static;
+    left: 0;
+    width: 100%;
+}
+
+.slide-out-right.unappearing, .slide-out-right.disappeared {
+    position: absolute;
+    left: 100%;
+    transition: left .3s ease-out;
+}
