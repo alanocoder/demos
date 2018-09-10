@@ -89,27 +89,26 @@ body {
     left: 0;
 }
 
-.slide-out-left {
+slide-out-left {
     position: static;
     left: 0;
     width: 100%;
+    transition: left 3s ease-out;
 }
 
-.slide-out-left.unappearing, .slide-out-left.disappeared {
+.slide-out-left.disappearing, .slide-out-left.disappeared {
     position: absolute;
     left: -100%;
-    transition: left .3s ease-out;
 }
-
 
 .slide-out-right {
     position: static;
     left: 0;
     width: 100%;
+    transition: left 3s ease-out;
 }
 
-.slide-out-right.unappearing, .slide-out-right.disappeared {
+.slide-out-right.disappearing, .slide-out-right.disappeared {
     position: absolute;
     left: 100%;
-    transition: left .3s ease-out;
 }
