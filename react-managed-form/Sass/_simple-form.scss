@@ -1,0 +1,81 @@
+﻿@import "./placeholders/_variables.scss";
+@import "./placeholders/_form_ph.scss";
+//@import "./_Textfield.scss";
+//@import "./_Dropdown.scss";
+//@import "./_Button.scss";
+
+@include exports("simple-form") {
+    form {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        padding-top: 1rem;
+    }
+
+    form.compact {
+        margin: 0;
+        padding-top: 0;
+    }
+
+    .field-error {
+        border: solid 1px $color_alert;
+        border-radius: .5rem;
+        background: url(/images/ic_error_outline_red_24px.svg);
+        background-position: 1rem 0.5rem;
+        background-repeat: no-repeat;
+        margin-bottom: 1rem;
+        padding: 1rem 1rem 1rem 4rem;
+        line-height: 1.4rem;
+        color: $color_alert;
+        font-size: 1.2rem;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .side-padded {
+        padding: 0 1rem 0 1rem;
+    }
+
+    .skdjfiow { /* honeypot */
+        display: none;
+    }
+
+    input.touched:invalid, textarea.touched:invalid, select.touched:invalid {
+        border: 1px solid red; /* show border as red when input is not valid */
+    }
+
+    input.touched:valid, textarea.touched:valid, select.touched:valid {
+        border: 1px solid green; // show border as green when input is valid
+    }
+
+    button.form {
+        @extend %button-default;
+        font-size: 1.6rem;
+        padding: .6rem;
+        font-family: $fonts;
+    }
+
+    .form-header {
+        color: #555555;
+        margin: 0 1rem 1rem 1rem; // don't set top margin, it affects transition position (when switch between static & absolute). use padding-top at form
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .form-note {
+        color: rgb(158, 158, 158);
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 1.2rem 0 1.2rem 0;
+    }
+
+    @media (min-width: $min-width-dual-cols) { /* boxed form for desktop/large screen version */
+        form {
+            max-width: $max-width-1-col;
+            margin: 0 auto;
+        }
+    }
+}

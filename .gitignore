@@ -261,3 +261,5 @@ __pycache__/
 *.pyc
 /css-transitioner/Scripts/_vsCompile
 /css-transitioner/wwwroot
+/react-managed-form/Scripts/_vsCompile
+/react-managed-form/wwwroot/dist

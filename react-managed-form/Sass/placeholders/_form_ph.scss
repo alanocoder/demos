@@ -1,0 +1,24 @@
+﻿@import "./_variables.scss";
+
+@include exports("form_ph") {
+    %input-default {
+        font-size: 1.8rem;
+        width: 100%;
+        //margin-bottom: 1.5rem;
+        font-family: $fonts;
+    }
+
+    %button-default {
+        text-align: center;
+        border-radius: 0.6rem;
+        //border: 1px solid #999;
+        //background-color: #eeeeff;
+        background-color: rgb(29, 161, 242);
+        color: white;
+        padding: 1.2rem;
+
+        &:disabled {
+            color: rgb(89, 211, 242);
+        }
+    }
+}

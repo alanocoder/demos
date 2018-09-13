@@ -1,0 +1,35 @@
+﻿$fonts: Helvetica, Arial, sans-serif;
+$color_alert: rgb(196, 0, 0);
+$color_info: rgb(50, 128, 50);
+
+/* phone viewport size:
+    width: 360 - 414 (note up to 480)
+    height: 640 - 812
+
+    tablet:
+    ipad: 1024x768, 1366x1024 (Pro)
+    Tab: 1280x800
+*/
+$maxwidth-very-low-res: 499px;
+
+$wide-screen-limit: 1400px; // this it the limit of width (max-width) the core content will show at
+
+$portrait-height-low-res: 599px; // device with samller screen than normal
+$max-width-single-col: 849px; // only 1 col should be shown if screen width is up to this size
+$min-width-dual-cols: 850px; // can show 2 cols for screen width at least this size
+$min-width-tri-cols: 1350px; // can show 3 cols for screen width at least this size
+$max-width-1-col: 600px; // max width for content that should only shows within 1 col
+
+
+$background-bar: #5f5f5f;
+$background-bar-hover: #333333;
+$foreground-bar: #ffffff; //#d1d1d1 - needs more contrast to pass Chrome Accessibility audit
+$background-bar-tab-highlight: #505050;
+
+$foreground-menu: #555555;
+$background-menu: #f9f9f9;
+$background-menu-hover: #eeeeee;
+$foreground-menu-title: #cccccc;
+$background-menu-title: #333333;
+
+$padding: 15px;

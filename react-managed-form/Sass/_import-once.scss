@@ -1,0 +1,10 @@
+﻿$modules: () !default;
+
+@mixin exports($name) {
+    @if (not index($modules, $name)) {
+        $modules: append($modules, $name) !global;
+        @content;
+    }
+}
+
+// http://4waisenkinder.de/blog/2014/03/06/import-once-in-sass-the-foundation-way/
