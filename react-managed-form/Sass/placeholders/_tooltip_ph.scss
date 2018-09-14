@@ -1,0 +1,45 @@
+﻿@include exports("tooltip_ph") {
+    %tooltip {
+        /* from place holder */
+        position: relative;
+        display: inline-block;
+        -webkit-user-select: none; // iOS11 still needs webkit
+        user-select: none; /* text not selectable */
+    }
+
+    %hover-show-text {
+        //display: block;
+        opacity: 1;
+        pointer-events: auto;
+        transition: opacity 0.5s ease-out; // this transition is activated when showing tooltip. z-index should be set as 1 right away, before opacity becomes 1.
+    }
+
+    .tooltip-text {
+        //z-index: -1; // z-index is needed to hide tooltip when not shown so it doesn't block other elements. then set higher z-index when shown
+        z-index: 31;
+        opacity: 0;
+        pointer-events: none; // use this will make tooltip not blocking even with high z-index
+        transition: opacity 0.5s ease-out 0s, z-index 0s ease-out 0.5s; // this transition is activated when hiding tooltip, z-index should only change to -1 after opacity becomes 0 (so the opacity transition is seen)
+        position: absolute;
+        width: auto;
+        padding: 5px 10px 5px 10px;
+        font-size: 10pt;
+        white-space: nowrap;
+        color: white;
+        background-color: #888888;
+        bottom: 102%;
+        right: 5px;
+        border-radius: 5px;
+        line-height: normal;
+    }
+
+    .tooltip-text::after {
+        // this is the little triangle to create look of bubble
+        content: " ";
+        position: absolute;
+        top: 100%;
+        border-width: 0.5rem;
+        border-style: solid;
+        border-color: #888888 transparent transparent transparent;
+    }
+}

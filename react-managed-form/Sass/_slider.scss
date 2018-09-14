@@ -1,0 +1,83 @@
+﻿@include exports("slider") {
+    @supports not (-ms-ime-align: auto) {
+        .r-slider {
+            input {
+                height: .2rem;
+                background-color: #8888ff;
+            }
+        }
+    }
+
+    .r-slider {
+        height: 3rem;
+
+        input {
+            width: 99%;
+            -webkit-appearance: none;
+            outline: none;
+            opacity: 0.7;
+            transition: opacity .2s;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        input:hover, input:active {
+            opacity: 1;
+        }
+
+        input::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background: #5555aa;
+            cursor: pointer;
+            //margin-top: -1.2rem;
+        }
+
+        input::-moz-range-thumb {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background: #5555aa;
+            cursor: pointer;
+        }
+
+        input:disabled {
+            opacity: 0.3;
+        }
+
+        input::-webkit-slider-thumb:disabled {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+
+        /* belows are for microsoft */
+        input::-ms-track {
+            height: .2rem;
+            background-color: transparent;
+            border-color: transparent;
+            border-width: 6px 0;
+            color: transparent;
+        }
+
+        input::-ms-fill-lower {
+            background: #5555aa;
+        }
+
+        input::-ms-fill-upper {
+            background: #aaaaaa;
+        }
+
+        input::-ms-thumb {
+            border: none;
+            height: 22px;
+            width: 22px;
+            border-radius: 100%;
+            background: #5555aa;
+        }
+    }
+}

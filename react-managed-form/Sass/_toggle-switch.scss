@@ -1,0 +1,69 @@
+﻿@include exports("toggle-switch") {
+    .r-switch {
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+        display: flex;
+
+        label {
+            position: relative;
+            display: inline-block;
+            width: 5rem;
+            height: 2.4rem;
+        }
+        /*
+        input {
+            display: none
+        }
+        */
+        .s-slider {
+            position: absolute;
+            cursor: pointer;
+            border-radius: 2.4rem;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+        }
+
+        .s-label {
+            margin-left: 1rem;
+        }
+
+        .s-label.disabled {
+            color: #ccc;
+        }
+
+        input:checked + .s-slider {
+            background-color: darkgreen;
+        }
+
+        input:focus + .s-slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .s-slider:before {
+            transform: translateX(2.6rem);
+        }
+
+        input:disabled + .s-slider {
+            background-color: #ccc;
+        }
+
+        .s-slider:before {
+            position: absolute;
+            content: "";
+            height: 2rem;
+            width: 2rem;
+            left: .2rem;
+            bottom: .2rem;
+            background-color: white;
+            border-radius: 50%;
+            transition: .4s;
+        }
+
+        .s-slider {
+            //background-color: #2196f3;
+        }
+    }
+}

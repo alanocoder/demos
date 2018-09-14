@@ -1,0 +1,52 @@
+﻿@include exports("radio-buttons") {
+    .r-radio {
+        position: relative;
+        padding-left: 3.5rem;
+        height: 2.4rem;
+        line-height: 2.4rem;
+        user-select: none;
+        font-size: 1.6rem;
+
+        .s-rb {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 2.4rem;
+            width: 2.4rem;
+            border: 1px solid #aaa;
+            border-radius: 50%;
+        }
+
+        .s-rb:after {
+            content: "";
+            position: absolute;
+            opacity: 0;
+            top: .4rem;
+            left: .4rem;
+            height: 1.4rem;
+            width: 1.4rem;
+            border-radius: 50%;
+            background-color: darkgreen;
+            transition: all 0.4s;
+        }
+
+        input:checked ~ .s-rb:after {
+            opacity: 1;
+        }
+
+        input:disabled ~ .s-label {
+            color: #ccc;
+        }
+    }
+
+    .r-radio:hover input:not(:checked):not(:disabled) ~ .s-rb {
+        background-color: #ccc;
+    }
+
+    .r-radio-group {
+        margin-top: 0.6rem;
+        .r-radio:not(:first-child) {
+            margin-top: 1.2rem;
+        }
+    }
+}

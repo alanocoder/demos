@@ -1,5 +1,8 @@
 ﻿@import "./_import-once.scss";
 @import "./_simple-form.scss";
+@import "./_toggle-switch.scss";
+@import "./_radio-buttons.scss";
+@import "./_slider.scss";
 
 *, *:before, *:after { // need for textarea
     -moz-box-sizing: border-box;

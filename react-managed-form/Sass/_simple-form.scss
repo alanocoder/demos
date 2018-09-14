@@ -1,8 +1,8 @@
 ﻿@import "./placeholders/_variables.scss";
 @import "./placeholders/_form_ph.scss";
-//@import "./_Textfield.scss";
-//@import "./_Dropdown.scss";
-//@import "./_Button.scss";
+@import "./_TextInput.scss";
+@import "./_Dropdown.scss";
+@import "./_Button.scss";
 
 @include exports("simple-form") {
     form {

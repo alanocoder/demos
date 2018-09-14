@@ -1,0 +1,8 @@
+﻿@import "./placeholders/_form_ph.scss";
+
+@include exports("button") {
+    .r-button {
+        @extend %button-default;
+        @extend %input-default;
+    }
+}

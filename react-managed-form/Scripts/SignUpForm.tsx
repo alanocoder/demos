@@ -66,7 +66,8 @@ export class SignUpForm extends React.Component<{}, { formError: string }> {
 
     render() {
         return (
-            <ManagedForm onSubmit={this.onSubmit} onChange={this.onChange} model={Model} defaultValues={{ drink: 'Tea'}}>
+            <ManagedForm onSubmit={this.onSubmit} onChange={this.onChange} model={Model} defaultValues={{ drink: 'Tea' }}>
+                <h2>ManagedForm with HTML inputs</h2>
                 <RenderTextField name='name' />
                 <RenderTextField name='email' />
                 <textarea name='description' placeholder='Your description' rows={5} />

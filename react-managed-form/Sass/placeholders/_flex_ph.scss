@@ -1,0 +1,8 @@
+﻿@include exports("flex_ph") {
+    %flex-space-between {
+        display: -webkit-flex; /* iOS 8 or earlier */
+        -webkit-justify-content: space-between;
+        display: flex;
+        justify-content: space-between;
+    }
+}

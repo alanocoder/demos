@@ -1,0 +1,26 @@
+﻿@import "./placeholders/_form_ph.scss";
+
+@include exports("dropdown") {
+    .r-dropdown {
+        margin-bottom: 1rem;
+
+        .s-error {
+            color: rgb(224, 36, 94);
+            margin: 1rem 1rem 1rem 1rem;
+            font-size: 1.2rem;
+        }
+
+        .s-label {
+            color: #bbb;
+        }
+
+        .s-option {
+            color: #000;
+        }
+
+        select {
+            @extend %input-default;
+            padding: .75rem 0 .75rem 0; // Note: not work in safari
+        }
+    }
+}

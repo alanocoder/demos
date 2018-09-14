@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Scripts\ManagedForm.tsx" />
     <None Remove="Scripts\SignUpForm-react-md.tsx" />
     <None Remove="Scripts\SignUpForm.tsx" />
   </ItemGroup>
@@ -21,7 +20,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="Scripts\ManagedForm.tsx" />
     <TypeScriptCompile Include="Scripts\SignUpForm-react-md.tsx" />
     <TypeScriptCompile Include="Scripts\SignUpForm.tsx" />
   </ItemGroup>

@@ -1,0 +1,60 @@
+﻿@import "./placeholders/_variables.scss";
+@import "./placeholders/_form_ph.scss";
+//@import "./_emoji.scss";
+
+@include exports("textinput") {
+    .r-ti {
+        text-align: left;
+        position: relative;
+        margin-bottom: 1.5rem;
+
+        .s-label {
+            color: #bbb;
+            display: inline-block;
+            transform: translate(0.2rem, 2.5rem);
+            transition: all 0.15s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .s-error {
+            color: rgb(224, 36, 94);
+            margin-top: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .s-label.s-active, .s-label.s-active.error {
+            transform: translate(0, 0);
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: rgb(29, 161, 242);
+        }
+
+        &.s-info {
+            input, textarea {
+                padding-right: 2.4rem; // has a popup info at the end. add the padding so input text won't overlap with the info icon
+            }
+        }
+
+        input, textarea {
+            @extend %input-default;
+            padding: .8rem 0 .8rem 0;
+            border: 0;
+            border-bottom: 1px solid #ddd;
+            background-color: transparent;
+
+            &:focus {
+                outline: none;
+                border-bottom: 2px solid rgb(29, 161, 242);
+            }
+        }
+
+        input.touched:valid, textarea.touched:valid {
+            border: 0;
+            border-bottom: 2px solid rgb(29, 161, 242);
+        }
+
+        input.touched:invalid, &.error input:not(:focus), textarea.touched:invalid, &.error textarea {
+            border: 0;
+            border-bottom: 1px solid rgb(224, 36, 94);
+        }
+    }
+}

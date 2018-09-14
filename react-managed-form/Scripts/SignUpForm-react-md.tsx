@@ -81,7 +81,7 @@ export class SignUpForm extends React.Component<any, any> {
     render() {
         return (
             <ManagedForm onSubmit={this.onSubmit} onChange={this.onChange} model={Model} defaultValues={{ agree: 'I agree', rate: '2' }}>
-                <h2>Custom form</h2>
+                <h2>Managed form with react-md</h2>
                 <RenderTextField name='name' />
                 <RenderTextField name='email' />
                 <RenderTextField rows={3} name='description' placeholder='Your description' />
